@@ -1,68 +1,65 @@
-import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Play } from "lucide-react";
 
 const HeroButtons = () => {
-    return (
-        <div className="flex flex-col sm:flex-row items-start gap-4 pt-3">
+  return (
+    <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
-            {/* Primary Button */}
-            <Button
-                size="lg"
-                className="
-          group
+      {/* Primary CTA */}
+
+      <Button
+        size="lg"
+        className="
+          h-14
           rounded-full
-          px-7
-          h-12
           bg-gradient-to-r
           from-cyan-500
-          via-blue-500
-          to-violet-500
+          via-blue-600
+          to-violet-600
+          px-8
+          text-base
+          font-semibold
           text-white
           shadow-lg
           shadow-cyan-500/20
           transition-all
           duration-300
-          hover:scale-105
+          hover:scale-[1.03]
           hover:shadow-cyan-500/40
         "
-            >
-                Get Started
+      >
+        Start Free Analysis
+        <ArrowRight className="ml-2 h-5 w-5" />
+      </Button>
 
-                <ArrowRight
-                    className="
-            ml-2
-            h-4
-            w-4
-            transition-transform
-            duration-300
-            group-hover:translate-x-1
-          "
-                />
-            </Button>
+      {/* Secondary CTA */}
 
-            {/* Secondary Button */}
-            <Button
-                variant="outline"
-                size="lg"
-                className="
-    rounded-full
-    px-7
-    h-12
-    border-white/20
-    bg-white/5
-    text-white
-    backdrop-blur-xl
-    hover:bg-white/10
-    hover:text-white
-  "
-            >
-                <Play className="mr-2 h-4 w-4" />
+      <Button
+        variant="outline"
+        size="lg"
+        className="
+          h-14
+          rounded-full
+          border-white/20
+          bg-white/5
+          px-8
+          text-base
+          font-semibold
+          text-white
+          backdrop-blur-xl
+          transition-all
+          duration-300
+          hover:scale-[1.03]
+          hover:bg-white/10
+          hover:text-white
+        "
+      >
+        <Play className="mr-2 h-4 w-4 fill-current" />
+        Explore Dashboard
+      </Button>
 
-                Watch Demo
-            </Button>
-
-        </div>
-    );
+    </div>
+  );
 };
 
 export default HeroButtons;

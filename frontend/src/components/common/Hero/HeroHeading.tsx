@@ -1,31 +1,38 @@
 const HeroHeading = () => {
   return (
-    <div className="space-y-8">
+    <div className="max-w-3xl">
 
-      <div className="space-y-5">
+      
 
-        <h1 className="text-5xl md:text-7xl font-black leading-[1.05] tracking-tight text-white">
+      {/* Heading */}
 
-          Understand Your
+      <h1 className="text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
 
-          <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-            Financial Behaviour
-          </span>
+        Understand Every
 
-          With AI
+        <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(34,211,238,0.18)]">
+          Rupee.
+        </span>
 
-        </h1>
+        <span className="mt-2 block">
+          Before It Leaves
+        </span>
 
-        <p className="max-w-2xl text-lg md:text-xl leading-8 text-zinc-400">
+        <span className="block">
+          Your Wallet.
+        </span>
 
-          FinLens AI learns your spending habits,
-          detects unusual transactions,
-          predicts financial risks,
-          and helps you build smarter financial decisions every day.
+      </h1>
 
-        </p>
+      {/* Description */}
 
-      </div>
+      <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
+
+        FinLens AI analyzes your spending behaviour, predicts financial risks,
+        builds smarter budgets, and delivers personalized AI-powered insights
+        to help you make confident financial decisions every day.
+
+      </p>
 
     </div>
   );

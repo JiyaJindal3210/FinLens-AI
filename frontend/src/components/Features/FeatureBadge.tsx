@@ -1,6 +1,6 @@
 import { Sparkles } from "lucide-react";
 
-const HeroBadge = () => {
+const FeatureBadge = () => {
   return (
     <div
       className="
@@ -11,23 +11,19 @@ const HeroBadge = () => {
         border
         border-cyan-400/20
         bg-cyan-400/10
-        px-5
+        px-4
         py-2
         text-sm
         font-medium
         text-cyan-300
         backdrop-blur-xl
-        transition-all
-        duration-300
-        hover:scale-105
-        hover:border-cyan-400/40
       "
     >
       <Sparkles className="h-4 w-4" />
 
-       AI-Powered Financial Intelligence
+      Powerful Features
     </div>
   );
 };
 
-export default HeroBadge;
+export default FeatureBadge;

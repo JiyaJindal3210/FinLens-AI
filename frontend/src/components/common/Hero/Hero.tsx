@@ -1,44 +1,69 @@
+import {
+  AuroraBackground,
+  FadeIn,
+} from "@/animations";
+
+
+
 import HeroBadge from "./HeroBadge";
 import HeroHeading from "./HeroHeading";
 import HeroButtons from "./HeroButtons";
-import HeroStats from "./HeroStats";
+import HeroTrustSection from "./HeroTrustSection";
 import HeroDashboardPreview from "./HeroDashboardPreview";
+import HeroScrollIndicator from "./HeroScrollIndicator";
+
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
+    <AuroraBackground>
+      
+      <section className="relative">
 
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 pt-24 pb-12 lg:px-8">
 
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
 
-          {/* LEFT */}
+            {/* LEFT */}
 
-          <div>
+            <div>
 
-            <HeroBadge />
+              <div className="space-y-8">
+                <FadeIn delay={0.1}>
+                  <HeroBadge />
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                  <HeroHeading />
+                </FadeIn>
+              </div>
 
-            <HeroHeading />
+              <FadeIn delay={0.3}>
+                <HeroButtons />
+              </FadeIn>
 
-            <HeroButtons />
+              <FadeIn delay={0.4}>
+                <HeroTrustSection />
+              </FadeIn>
 
-            <HeroStats />
+            </div>
+
+            {/* RIGHT */}
+
+            <div className="flex justify-center lg:justify-end">
+
+              <FadeIn delay={0.5}>
+                <HeroDashboardPreview />
+              </FadeIn>
+
+            </div>
 
           </div>
-
-          {/* RIGHT */}
-
-          <div className="flex justify-center lg:justify-end">
-
-            <HeroDashboardPreview />
-
-          </div>
-
+          <HeroScrollIndicator />
         </div>
+        
 
-      </div>
-
-    </section>
+      </section>
+      
+    </AuroraBackground>
   );
 };
 
